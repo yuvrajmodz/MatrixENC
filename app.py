@@ -5,6 +5,15 @@ import base58
 
 app = Flask(__name__)
 
+
+#
+#  𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗢𝗻 𝟮𝟭 𝗙𝗲𝗯 𝟮𝟬𝟮𝟱
+#  
+#  𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 © 𝟮𝟬𝟮𝟱 𝗬𝗨𝗩𝗥𝗔𝗝𝗠𝗢𝗗𝗭     
+#  𝗖𝗥𝗘𝗗𝗜𝗧: 𝐌𝐀𝐓𝐑𝐈𝐗 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑      
+#                                    
+      
+
 def is_request_from_home():
     referer = request.headers.get("Referer", "")
     return referer and request.host in referer
