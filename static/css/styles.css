@@ -1,0 +1,216 @@
+        @import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;500&display=swap');
+        
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --secondary: #3B82F6;
+            --accent: #60A5FA;
+            --pink: #EC4899;
+            --dark-bg: #0F172A;
+            --card-bg: #1E293B;
+            --text: #F3F4F6;
+        }
+
+        body {
+            font-family: 'Product Sans', Arial, sans-serif;
+            background-color: var(--dark-bg);
+            min-height: 100vh;
+            color: var(--text);
+        }
+
+        .main-container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding-top: 12vh;
+        }
+
+        .title-gradient {
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent), var(--pink));
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 38px;
+            letter-spacing: -0.5px;
+        }
+
+        .input-box {
+            background: var(--card-bg);
+            border: 2px solid rgba(37, 99, 235, 0.1);
+            border-radius: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .input-box:hover, .input-box:focus-within {
+            border-color: var(--primary);
+            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.2);
+        }
+
+        .textarea-style {
+            background: transparent;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .textarea-style::placeholder {
+            color: rgba(243, 244, 246, 0.5);
+        }
+
+        .encode-btn {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .encode-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .encode-btn:active {
+            transform: translateY(0);
+        }
+
+        .select-box {
+            background-color: var(--card-bg);
+            border: 2px solid rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+            color: var(--text);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%232563EB'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+            background-position: right 8px center;
+            background-repeat: no-repeat;
+            transition: all 0.3s;
+        }
+
+        .select-box:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .action-btn {
+            background: var(--card-bg);
+            color: var(--text);
+            border: 2px solid rgba(37, 99, 235, 0.1);
+            transition: all 0.3s;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .action-btn:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .floating-label {
+            position: absolute;
+            top: -20px;
+            left: 15px;
+            padding: 0 5px;
+            font-size: 12px;
+            color: yellow;
+            background: transparent;
+        }
+
+        .animated-bg {
+            background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--accent), var(--pink));
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 4px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                transparent 100%
+            );
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+            .paste-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: #3b82f6;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+    
+    .paste-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .paste-btn:active {
+      transform: scale(0.95);
+    }
+    
+    .paste-btn::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
+      transform: rotate(45deg);
+      z-index: 1;
+      transition: all 0.6s ease;
+      animation: shine 3s infinite;
+    }
+    
+    @keyframes shine {
+      0% {
+        left: -100%;
+        top: -100%;
+      }
+      100% {
+        left: 100%;
+        top: 100%;
+      }
+    }
+    
+    .input-box {
+      position: relative;
+    }
