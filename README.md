@@ -1,4 +1,16 @@
-# Matrix Encoder/Decoder API
+# Developer info
+
+╔═════════════════════════╗
+║
+║ 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 © 𝟮𝟬𝟮𝟱 𝗬𝗨𝗩𝗥𝗔𝗝𝗠𝗢𝗗𝗭     
+║  𝗖𝗥𝗘𝗗𝗜𝗧: 𝐌𝐀𝐓𝐑𝐈𝐗 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑      
+║                            ╚═════════════════════════╝
+
+# Creation Data & Time
+
+Friday, 21 Feb 2025 on 05:14 pm
+
+# Matrix Enc API
 
 This is a simple Flask-based web application that provides encoding and decoding functionality for various encoding methods like URL encoding, Base16, Base32, Base58, Base64, and Base85.
 
